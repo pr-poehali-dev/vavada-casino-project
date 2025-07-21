@@ -65,6 +65,14 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <img 
+            src="/img/76d25653-8509-4cd4-b4f1-e7ea72ad9c95.jpg" 
+            alt="Casino background"
+            className="w-full h-full object-cover opacity-30"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-transparent to-black/80"></div>
+        </div>
         <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-yellow-500/20 animate-pulse"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <h1 className="text-6xl md:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-500 mb-6">
