@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -47,12 +48,16 @@ const Index = () => {
               <a href="#support" className="text-white hover:text-orange-400 transition-colors">Поддержка</a>
             </nav>
             <div className="flex items-center space-x-3">
-              <Button variant="outline" className="border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-black">
-                Войти
-              </Button>
-              <Button className="bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-semibold hover:from-orange-600 hover:to-yellow-600">
-                Регистрация
-              </Button>
+              <Link to="/login">
+                <Button variant="outline" className="border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-black">
+                  Войти
+                </Button>
+              </Link>
+              <Link to="/register">
+                <Button className="bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-semibold hover:from-orange-600 hover:to-yellow-600">
+                  Регистрация
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -82,10 +87,12 @@ const Index = () => {
               </Card>
             ))}
           </div>
-          <Button size="lg" className="bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-bold text-lg px-8 py-6 hover:from-orange-600 hover:to-yellow-600 transform hover:scale-105 transition-all duration-200">
-            <Icon name="Play" size={20} className="mr-2" />
-            Начать играть
-          </Button>
+          <Link to="/slots">
+            <Button size="lg" className="bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-bold text-lg px-8 py-6 hover:from-orange-600 hover:to-yellow-600 transform hover:scale-105 transition-all duration-200">
+              <Icon name="Play" size={20} className="mr-2" />
+              Начать играть
+            </Button>
+          </Link>
         </div>
       </section>
 
@@ -111,9 +118,11 @@ const Index = () => {
                       RTP {slot.rtp}
                     </Badge>
                   </div>
-                  <Button className="w-full bg-orange-500 hover:bg-orange-600 text-black font-semibold">
-                    Играть
-                  </Button>
+                  <Link to={`/slot/${slot.name.toLowerCase().replace(/\s+/g, '-')}`}>
+                    <Button className="w-full bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                      Играть
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}
@@ -138,9 +147,11 @@ const Index = () => {
                 </CardHeader>
                 <CardContent className="text-center">
                   <p className="text-gray-300 mb-4">{bonus.description}</p>
-                  <Button className="w-full bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-semibold hover:from-orange-600 hover:to-yellow-600">
-                    Получить
-                  </Button>
+                  <Link to="/bonus">
+                    <Button className="w-full bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-semibold hover:from-orange-600 hover:to-yellow-600">
+                      Получить
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}
@@ -179,10 +190,12 @@ const Index = () => {
                       <div className="text-sm text-gray-400">Участников</div>
                     </div>
                   </div>
-                  <Button className="w-full bg-orange-500 hover:bg-orange-600 text-black font-semibold">
-                    <Icon name="Trophy" size={16} className="mr-2" />
-                    Участвовать
-                  </Button>
+                  <Link to={`/tournament/${tournament.name.toLowerCase().replace(/\s+/g, '-')}`}>
+                    <Button className="w-full bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                      <Icon name="Trophy" size={16} className="mr-2" />
+                      Участвовать
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}
@@ -200,18 +213,24 @@ const Index = () => {
             Наша служба поддержки работает 24/7 и готова помочь вам в любое время
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" variant="outline" className="border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-black">
-              <Icon name="MessageCircle" size={20} className="mr-2" />
-              Онлайн чат
-            </Button>
-            <Button size="lg" variant="outline" className="border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-black">
-              <Icon name="Mail" size={20} className="mr-2" />
-              Email
-            </Button>
-            <Button size="lg" variant="outline" className="border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-black">
-              <Icon name="Phone" size={20} className="mr-2" />
-              Телефон
-            </Button>
+            <Link to="/chat">
+              <Button size="lg" variant="outline" className="border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-black">
+                <Icon name="MessageCircle" size={20} className="mr-2" />
+                Онлайн чат
+              </Button>
+            </Link>
+            <Link to="/support">
+              <Button size="lg" variant="outline" className="border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-black">
+                <Icon name="Mail" size={20} className="mr-2" />
+                Email
+              </Button>
+            </Link>
+            <Link to="/phone">
+              <Button size="lg" variant="outline" className="border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-black">
+                <Icon name="Phone" size={20} className="mr-2" />
+                Телефон
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
