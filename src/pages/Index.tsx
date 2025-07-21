@@ -13,10 +13,10 @@ const Index = () => {
   ];
 
   const slots = [
-    { name: 'Книга Фараона', provider: 'Play\'n GO', rtp: '96.28%' },
-    { name: 'Сладкая Бонанца', provider: 'Pragmatic Play', rtp: '96.51%' },
-    { name: 'Волк Золото', provider: 'Pragmatic Play', rtp: '96.01%' },
-    { name: 'Магия Фруктов', provider: 'Wazdan', rtp: '96.45%' }
+    { name: 'Книга Фараона', provider: 'Play\'n GO', rtp: '96.28%', image: '/img/6f60c554-ff06-40bd-bf35-94651377b339.jpg' },
+    { name: 'Сладкая Бонанца', provider: 'Pragmatic Play', rtp: '96.51%', image: '/img/e81b0bfe-c402-4880-ae31-851d42c7ad98.jpg' },
+    { name: 'Волк Золото', provider: 'Pragmatic Play', rtp: '96.01%', image: '/img/76d25653-8509-4cd4-b4f1-e7ea72ad9c95.jpg' },
+    { name: 'Магия Фруктов', provider: 'Wazdan', rtp: '96.45%', image: '/img/6f60c554-ff06-40bd-bf35-94651377b339.jpg' }
   ];
 
   const bonuses = [
@@ -106,8 +106,13 @@ const Index = () => {
             {slots.map((slot, index) => (
               <Card key={index} className="bg-gradient-to-br from-gray-900 to-black border-gray-800 hover:border-orange-500/50 transition-all duration-300 hover:scale-105 group">
                 <CardHeader className="pb-3">
-                  <div className="w-full h-32 bg-gradient-to-br from-orange-500/20 to-yellow-500/20 rounded-lg mb-3 flex items-center justify-center group-hover:from-orange-500/30 group-hover:to-yellow-500/30 transition-all">
-                    <Icon name="Gamepad2" size={48} className="text-orange-400" />
+                  <div className="w-full h-32 rounded-lg mb-3 overflow-hidden relative group-hover:scale-105 transition-all">
+                    <img 
+                      src={slot.image} 
+                      alt={slot.name}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                   </div>
                   <CardTitle className="text-white text-lg">{slot.name}</CardTitle>
                   <div className="text-sm text-gray-400">{slot.provider}</div>
