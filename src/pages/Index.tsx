@@ -216,38 +216,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Support */}
-      <section id="support" className="py-20 bg-gradient-to-br from-gray-900/50 to-black/50">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-white mb-8">
-            Нужна <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-500">Помощь?</span>
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Наша служба поддержки работает 24/7 и готова помочь вам в любое время
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link to="/chat">
-              <Button size="lg" variant="outline" className="border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-black">
-                <Icon name="MessageCircle" size={20} className="mr-2" />
-                Онлайн чат
-              </Button>
-            </Link>
-            <Link to="/support">
-              <Button size="lg" variant="outline" className="border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-black">
-                <Icon name="Mail" size={20} className="mr-2" />
-                Email
-              </Button>
-            </Link>
-            <Link to="/phone">
-              <Button size="lg" variant="outline" className="border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-black">
-                <Icon name="Phone" size={20} className="mr-2" />
-                Телефон
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Content Sections */}
       <section className="py-20 bg-gradient-to-br from-gray-900/30 to-black/30">
         <div className="container mx-auto px-4">
@@ -401,6 +369,38 @@ const Index = () => {
             <p>
               Вавада casino 2025 kz включает специальные предложения для казахстанских пользователей. Платформа поддерживает популярные в Казахстане способы пополнения и вывода средств. Все операции проводятся в соответствии с местным законодательством.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Support */}
+      <section id="support" className="py-20 bg-gradient-to-br from-gray-900/50 to-black/50">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold text-white mb-8">
+            Нужна <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-500">Помощь?</span>
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Наша служба поддержки работает 24/7 и готова помочь вам в любое время
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link to="/chat">
+              <Button size="lg" variant="outline" className="border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-black">
+                <Icon name="MessageCircle" size={20} className="mr-2" />
+                Онлайн чат
+              </Button>
+            </Link>
+            <Link to="/support">
+              <Button size="lg" variant="outline" className="border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-black">
+                <Icon name="Mail" size={20} className="mr-2" />
+                Email
+              </Button>
+            </Link>
+            <Link to="/phone">
+              <Button size="lg" variant="outline" className="border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-black">
+                <Icon name="Phone" size={20} className="mr-2" />
+                Телефон
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
