@@ -152,7 +152,7 @@ const Index = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {bonuses.map((bonus, index) => (
-              <Card key={index} className="bg-gradient-to-br from-orange-500/10 to-yellow-500/10 border-orange-500/30 hover:border-orange-500 transition-all duration-300 hover:scale-105">
+              <Card key={index} className="bg-gradient-to-br from-gray-900 to-black border-orange-500/30 hover:border-orange-500 transition-all duration-300 hover:scale-105">
                 <CardHeader className="text-center">
                   <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-500 mb-2">
                     {bonus.amount}
@@ -251,7 +251,7 @@ const Index = () => {
                 Вавада online официальный сайт обеспечивает максимальную безопасность и стабильность работы. Система автоматически определяет оптимальный сервер для подключения, обеспечивая высокую скорость загрузки.
               </p>
             </div>
-            <Card className="bg-gradient-to-br from-orange-500/10 to-yellow-500/10 border-orange-500/30">
+            <Card className="bg-gradient-to-br from-gray-900 to-black border-orange-500/30">
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold text-white mb-4">Преимущества Online версии</h3>
                 <ul className="text-gray-300 space-y-2">
@@ -333,7 +333,7 @@ const Index = () => {
                 </RefLink>
               </div>
             </div>
-            <Card className="bg-gradient-to-br from-orange-500/10 to-yellow-500/10 border-orange-500/30">
+            <Card className="bg-gradient-to-br from-gray-900 to-black border-orange-500/30">
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold text-white mb-4">Возможности мобильной версии</h3>
                 <div className="grid grid-cols-2 gap-4">
