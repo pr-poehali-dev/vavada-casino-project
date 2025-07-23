@@ -38,8 +38,8 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <div className="text-2xl font-bold text-white">VAVADA</div>
-              <Badge className="bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-semibold">CASINO</Badge>
+              <div className="text-xl sm:text-2xl font-bold text-white">VAVADA</div>
+              <Badge className="bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-semibold text-xs sm:text-sm">CASINO</Badge>
             </div>
             <nav className="hidden md:flex items-center space-x-6">
               <a href="#" className="text-white hover:text-orange-400 transition-colors">Главная</a>
@@ -48,14 +48,14 @@ const Index = () => {
               <a href="#tournaments" className="text-white hover:text-orange-400 transition-colors">Турниры</a>
               <a href="#support" className="text-white hover:text-orange-400 transition-colors">Поддержка</a>
             </nav>
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center space-x-2 sm:space-x-3">
               <RefLink>
-                <Button variant="outline" className="border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-black">
+                <Button variant="outline" className="border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-black text-xs sm:text-sm px-3 sm:px-4">
                   Войти
                 </Button>
               </RefLink>
               <RefLink>
-                <Button className="bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-semibold hover:from-orange-600 hover:to-yellow-600">
+                <Button className="bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-semibold hover:from-orange-600 hover:to-yellow-600 text-xs sm:text-sm px-3 sm:px-4">
                   Регистрация
                 </Button>
               </RefLink>
@@ -65,7 +65,7 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
+      <section className="relative py-12 md:py-20 overflow-hidden">
         <div className="absolute inset-0">
           <img 
             src="/img/76d25653-8509-4cd4-b4f1-e7ea72ad9c95.jpg" 
@@ -76,18 +76,18 @@ const Index = () => {
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-yellow-500/20 animate-pulse"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
-          <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-500 mb-6">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-500 mb-4 md:mb-6 leading-tight">
             Вавада: Официальный сайт, рабочие зеркала и полное руководство для игроков
           </h1>
-          <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 mb-6 md:mb-8 max-w-4xl mx-auto px-2">
             Вавада — это популярная игровая платформа, которая привлекает миллионы пользователей по всему миру. Платформа известна под различными вариантами написания: vadaa, vavadaa, vavada, что связано с особенностями доменных имен и региональными ограничениями.
           </p>
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 md:mb-12 px-2">
             {jackpots.map((jackpot, index) => (
               <Card key={index} className="bg-gradient-to-br from-gray-900 to-black border-orange-500/30 hover:border-orange-500 transition-all duration-300 hover:scale-105">
-                <CardContent className="p-4">
-                  <div className="text-sm text-gray-400 mb-1">{jackpot.name}</div>
-                  <div className="text-2xl font-bold text-white mb-1">{jackpot.amount}</div>
+                <CardContent className="p-3 sm:p-4">
+                  <div className="text-xs sm:text-sm text-gray-400 mb-1">{jackpot.name}</div>
+                  <div className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-1">{jackpot.amount}</div>
                   <Badge className="bg-green-500/20 text-green-400 text-xs">
                     <Icon name="TrendingUp" size={12} className="mr-1" />
                     {jackpot.trend}
@@ -97,7 +97,7 @@ const Index = () => {
             ))}
           </div>
           <RefLink>
-            <Button size="lg" className="bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-bold text-lg px-8 py-6 hover:from-orange-600 hover:to-yellow-600 transform hover:scale-105 transition-all duration-200">
+            <Button size="lg" className="bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-bold text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 hover:from-orange-600 hover:to-yellow-600 transform hover:scale-105 transition-all duration-200 w-full sm:w-auto">
               <Icon name="Play" size={20} className="mr-2" />
               Начать играть
             </Button>
@@ -106,9 +106,9 @@ const Index = () => {
       </section>
 
       {/* Popular Slots */}
-      <section id="slots" className="py-20">
+      <section id="slots" className="py-12 md:py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-white text-center mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center mb-8 md:mb-12 px-4">
             Популярные <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-500">Слоты</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -145,9 +145,9 @@ const Index = () => {
       </section>
 
       {/* Bonuses */}
-      <section id="bonuses" className="py-20 bg-gradient-to-br from-gray-900/50 to-black/50">
+      <section id="bonuses" className="py-12 md:py-20 bg-gradient-to-br from-gray-900/50 to-black/50">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-white text-center mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center mb-8 md:mb-12 px-4">
             Щедрые <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-500">Бонусы</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -174,9 +174,9 @@ const Index = () => {
       </section>
 
       {/* Tournaments */}
-      <section id="tournaments" className="py-20">
+      <section id="tournaments" className="py-12 md:py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-white text-center mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center mb-8 md:mb-12 px-4">
             Активные <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-500">Турниры</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -218,12 +218,12 @@ const Index = () => {
       </section>
 
       {/* Content Sections */}
-      <section className="py-20 bg-gradient-to-br from-gray-900/30 to-black/30">
+      <section className="py-12 md:py-20 bg-gradient-to-br from-gray-900/30 to-black/30">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-white mb-8">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-6 md:mb-8 px-4">
             Официальный сайт <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-500">Вавада</span> и рабочие зеркала
           </h2>
-          <div className="text-gray-300 space-y-4 max-w-4xl">
+          <div className="text-gray-300 space-y-4 max-w-4xl text-sm sm:text-base px-4">
             <p>
               Официальный сайт Вавада регулярно подвергается блокировкам со стороны регулирующих органов, поэтому пользователи часто ищут альтернативные способы доступа. Сайт вавады работает через систему зеркал — точных копий основного ресурса с аналогичным функционалом.
             </p>
@@ -239,7 +239,7 @@ const Index = () => {
 
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-white mb-8">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-6 md:mb-8 px-4">
             Доступ к платформе <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-500">Вавада Online</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -266,9 +266,9 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-gray-900/30 to-black/30">
+      <section className="py-12 md:py-20 bg-gradient-to-br from-gray-900/30 to-black/30">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-white mb-8">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-6 md:mb-8 px-4">
             Промокоды и <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-500">бонусная система</span> Вавада
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -360,12 +360,12 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-gray-900/30 to-black/30">
+      <section className="py-12 md:py-20 bg-gradient-to-br from-gray-900/30 to-black/30">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-white mb-8">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-6 md:mb-8 px-4">
             Для пользователей из <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-500">Казахстана</span>
           </h2>
-          <div className="max-w-4xl text-gray-300 space-y-4">
+          <div className="max-w-4xl text-gray-300 space-y-4 text-sm sm:text-base px-4">
             <p>
               Вавада кз — специальная версия платформы, адаптированная для пользователей из Казахстана. Вавада казахстан предлагает локализованный интерфейс, поддержку местных платежных систем и валют. Служба поддержки работает на казахском и русском языках.
             </p>
@@ -377,30 +377,30 @@ const Index = () => {
       </section>
 
       {/* Support */}
-      <section id="support" className="py-20 bg-gradient-to-br from-gray-900/50 to-black/50">
+      <section id="support" className="py-12 md:py-20 bg-gradient-to-br from-gray-900/50 to-black/50">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-white mb-8">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 md:mb-8 px-4">
             Нужна <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-500">Помощь?</span>
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 md:mb-8 max-w-2xl mx-auto px-4">
             Наша служба поддержки работает 24/7 и готова помочь вам в любое время
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 px-4">
             <Link to="/chat">
-              <Button size="lg" variant="outline" className="border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-black">
-                <Icon name="MessageCircle" size={20} className="mr-2" />
+              <Button size="lg" variant="outline" className="border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-black w-full sm:w-auto text-sm sm:text-base">
+                <Icon name="MessageCircle" size={16} className="mr-2" />
                 Онлайн чат
               </Button>
             </Link>
             <Link to="/support">
-              <Button size="lg" variant="outline" className="border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-black">
-                <Icon name="Mail" size={20} className="mr-2" />
+              <Button size="lg" variant="outline" className="border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-black w-full sm:w-auto text-sm sm:text-base">
+                <Icon name="Mail" size={16} className="mr-2" />
                 Email
               </Button>
             </Link>
             <Link to="/phone">
-              <Button size="lg" variant="outline" className="border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-black">
-                <Icon name="Phone" size={20} className="mr-2" />
+              <Button size="lg" variant="outline" className="border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-black w-full sm:w-auto text-sm sm:text-base">
+                <Icon name="Phone" size={16} className="mr-2" />
                 Телефон
               </Button>
             </Link>
@@ -409,13 +409,13 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-black border-t border-gray-800 py-12">
+      <footer className="bg-black border-t border-gray-800 py-8 md:py-12">
         <div className="container mx-auto px-4">
           <div className="text-center">
-            <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-500 mb-4">
+            <div className="text-xl sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-500 mb-4">
               VAVADA CASINO
             </div>
-            <p className="text-gray-400 mb-6">Играйте ответственно. 18+</p>
+            <p className="text-gray-400 mb-6 text-sm sm:text-base">Играйте ответственно. 18+</p>
             <div className="flex justify-center space-x-6 text-sm text-gray-500">
               <a href="#" className="hover:text-orange-400 transition-colors">Правила</a>
               <a href="#" className="hover:text-orange-400 transition-colors">Конфиденциальность</a>
