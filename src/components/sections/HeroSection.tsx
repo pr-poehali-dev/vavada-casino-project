@@ -28,8 +28,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({ jackpots }) => {
       </div>
       <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-yellow-500/20 animate-pulse"></div>
       <div className="container mx-auto px-4 text-center relative z-10">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-500 mb-4 md:mb-6 leading-tight">
-          Вавада: Официальный сайт, рабочие зеркала и полное руководство для игроков
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-500">Вавада</span>: Официальный сайт, рабочие зеркала и полное руководство для игроков
         </h1>
         <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 mb-6 md:mb-8 max-w-4xl mx-auto px-2">
           Вавада — это популярная игровая платформа, которая привлекает миллионы пользователей по всему миру. Платформа известна под различными вариантами написания: vadaa, vavadaa, vavada, что связано с особенностями доменных имен и региональными ограничениями.
