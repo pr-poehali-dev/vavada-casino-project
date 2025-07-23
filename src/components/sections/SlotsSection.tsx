@@ -19,8 +19,8 @@ const SlotsSection: React.FC<SlotsSectionProps> = ({ slots }) => {
   return (
     <section id="slots" className="py-12 md:py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center mb-8 md:mb-12 px-4">
-          Популярные <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-500">Слоты</span>
+        <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-8">
+          Популярные Слоты
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {slots.map((slot, index) => (

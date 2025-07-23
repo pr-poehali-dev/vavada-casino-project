@@ -11,8 +11,8 @@ const ContentSections = () => {
       {/* Content Sections */}
       <section className="py-12 md:py-20 bg-gradient-to-br from-gray-900/30 to-black/30">
         <div className="container mx-auto px-4">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-6 md:mb-8 px-4">
-            Официальный сайт <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-500">Вавада</span> и рабочие зеркала
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+            Официальный сайт Вавада и рабочие зеркала
           </h2>
           <div className="text-gray-300 space-y-4 max-w-4xl text-sm sm:text-base px-4">
             <p>
