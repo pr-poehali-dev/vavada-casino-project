@@ -62,6 +62,41 @@ const Index = () => {
     }
   ];
 
+  const faqData = [
+    {
+      question: 'Как зарегистрироваться в Вавада?',
+      answer: 'Нажмите кнопку "Регистрация", заполните форму с основными данными (email, пароль, телефон). Подтвердите email и можете начинать играть. Регистрация занимает менее 2 минут.'
+    },
+    {
+      question: 'Какие способы пополнения и вывода средств доступны?',
+      answer: 'Банковские карты (Visa/MasterCard/МИР), электронные кошельки (Qiwi, WebMoney, ЮMoney), банковские переводы, криптовалюты. Минимальный депозит - 100₽, вывод от 500₽.'
+    },
+    {
+      question: 'Сколько времени занимает вывод средств?',
+      answer: 'На банковские карты - до 24 часов, на электронные кошельки - до 2 часов, криптовалюты - до 1 часа. Первый вывод может занять до 72 часов для верификации.'
+    },
+    {
+      question: 'Нужно ли проходить верификацию?',
+      answer: 'Верификация обязательна для всех игроков. Загрузите фото паспорта и подтверждающий адрес документ в личном кабинете. Процесс занимает 24-48 часов.'
+    },
+    {
+      question: 'Какие бонусы доступны новым игрокам?',
+      answer: 'Приветственный бонус 100% до 50,000₽ + 200 фриспинов, еженедельные бонусы до 25%, кэшбэк 10%, участие в турнирах с призовыми фондами до 1,000,000₽.'
+    },
+    {
+      question: 'Безопасно ли играть в Вавада?',
+      answer: 'Да, платформа использует SSL-шифрование, лицензирована, проходит регулярные аудиты RNG, средства игроков хранятся на отдельных счетах. Поддержка работает 24/7.'
+    },
+    {
+      question: 'Есть ли мобильное приложение?',
+      answer: 'Да, доступно приложение для iOS и Android, а также адаптивная мобильная версия сайта. Все функции доступны на мобильных устройствах.'
+    },
+    {
+      question: 'Что делать если сайт заблокирован?',
+      answer: 'Используйте рабочие зеркала, VPN, или мобильное приложение. Актуальные ссылки всегда доступны в службе поддержки. Зеркала обновляются автоматически.'
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">
       {/* Header */}
@@ -439,6 +474,44 @@ const Index = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-12 md:py-20 bg-gradient-to-br from-gray-900/30 to-black/30">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center mb-8 md:mb-12 px-4">
+            Часто задаваемые <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-500">вопросы</span>
+          </h2>
+          <div className="max-w-4xl mx-auto space-y-4">
+            {faqData.map((faq, index) => (
+              <Card key={index} className="bg-gradient-to-br from-gray-900 to-black border-gray-800 hover:border-orange-500/50 transition-all duration-300">
+                <CardHeader className="pb-3">
+                  <CardTitle className="text-white text-lg flex items-center">
+                    <Icon name="HelpCircle" size={20} className="text-orange-400 mr-3 flex-shrink-0" />
+                    <span className="text-sm sm:text-base md:text-lg">{faq.question}</span>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-300 text-sm sm:text-base leading-relaxed pl-8">
+                    {faq.answer}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          
+          <div className="text-center mt-8 md:mt-12">
+            <p className="text-gray-400 mb-4 text-sm sm:text-base px-4">
+              Не нашли ответ на свой вопрос?
+            </p>
+            <RefLink>
+              <Button size="lg" className="bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-semibold hover:from-orange-600 hover:to-yellow-600 w-full sm:w-auto">
+                <Icon name="MessageCircle" size={16} className="mr-2" />
+                Связаться с поддержкой
+              </Button>
+            </RefLink>
           </div>
         </div>
       </section>
