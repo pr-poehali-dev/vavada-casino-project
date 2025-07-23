@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
+import RefLink from '@/components/RefLink';
 
 const Index = () => {
   const jackpots = [
@@ -48,16 +49,16 @@ const Index = () => {
               <a href="#support" className="text-white hover:text-orange-400 transition-colors">Поддержка</a>
             </nav>
             <div className="flex items-center space-x-3">
-              <Link to="/login">
+              <RefLink>
                 <Button variant="outline" className="border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-black">
                   Войти
                 </Button>
-              </Link>
-              <Link to="/register">
+              </RefLink>
+              <RefLink>
                 <Button className="bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-semibold hover:from-orange-600 hover:to-yellow-600">
                   Регистрация
                 </Button>
-              </Link>
+              </RefLink>
             </div>
           </div>
         </div>
@@ -95,12 +96,12 @@ const Index = () => {
               </Card>
             ))}
           </div>
-          <Link to="/slots">
+          <RefLink>
             <Button size="lg" className="bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-bold text-lg px-8 py-6 hover:from-orange-600 hover:to-yellow-600 transform hover:scale-105 transition-all duration-200">
               <Icon name="Play" size={20} className="mr-2" />
               Начать играть
             </Button>
-          </Link>
+          </RefLink>
         </div>
       </section>
 
@@ -131,11 +132,11 @@ const Index = () => {
                       RTP {slot.rtp}
                     </Badge>
                   </div>
-                  <Link to={`/slot/${slot.name.toLowerCase().replace(/\s+/g, '-')}`}>
+                  <RefLink>
                     <Button className="w-full bg-orange-500 hover:bg-orange-600 text-black font-semibold">
                       Играть
                     </Button>
-                  </Link>
+                  </RefLink>
                 </CardContent>
               </Card>
             ))}
@@ -160,11 +161,11 @@ const Index = () => {
                 </CardHeader>
                 <CardContent className="text-center">
                   <p className="text-gray-300 mb-4">{bonus.description}</p>
-                  <Link to="/bonus">
+                  <RefLink>
                     <Button className="w-full bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-semibold hover:from-orange-600 hover:to-yellow-600">
                       Получить
                     </Button>
-                  </Link>
+                  </RefLink>
                 </CardContent>
               </Card>
             ))}
@@ -203,12 +204,12 @@ const Index = () => {
                       <div className="text-sm text-gray-400">Участников</div>
                     </div>
                   </div>
-                  <Link to={`/tournament/${tournament.name.toLowerCase().replace(/\s+/g, '-')}`}>
+                  <RefLink>
                     <Button className="w-full bg-orange-500 hover:bg-orange-600 text-black font-semibold">
                       <Icon name="Trophy" size={16} className="mr-2" />
                       Участвовать
                     </Button>
-                  </Link>
+                  </RefLink>
                 </CardContent>
               </Card>
             ))}
@@ -324,10 +325,12 @@ const Index = () => {
                 Скачать вавада можно через официальные магазины приложений или напрямую с сайта. Вавада приложение предлагает дополнительные возможности: push-уведомления о новых бонусах, быстрый доступ к любимым играм и оптимизированный интерфейс.
               </p>
               <div className="flex gap-4 mt-6">
-                <Button className="bg-gradient-to-r from-orange-500 to-yellow-500 text-black">
-                  <Icon name="Download" size={20} className="mr-2" />
-                  Скачать приложение
-                </Button>
+                <RefLink>
+                  <Button className="bg-gradient-to-r from-orange-500 to-yellow-500 text-black">
+                    <Icon name="Download" size={20} className="mr-2" />
+                    Скачать приложение
+                  </Button>
+                </RefLink>
               </div>
             </div>
             <Card className="bg-gradient-to-br from-orange-500/10 to-yellow-500/10 border-orange-500/30">
